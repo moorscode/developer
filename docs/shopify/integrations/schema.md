@@ -120,5 +120,12 @@ setting which is stored in `article.metafields.yoast_seo.indexable.value.open_gr
 
 ## Constructing ID parameters
 
-* `WebPage`:
-* `WebSite`:
+
+* `Organization`: `shop.url | append: '/#/schema/organization/1'`
+* `WebSite`: `shop.url | append: '/#/schema/website/1'`
+* `WebPage`: `canonical_url`
+* `Article`: `canonical_url | append: '#/schema/article/' | append: article.id`
+* `Product`: `canonical_url | append: "/#/schema/Product"`
+* `Offer`: `shop.url | append: '/#/schema/Offer/' | append: variant.id`
+* `BreadcrumbList`: `canonical_url | append: '/#/schema/breadcrumb'`
+* `ImageObject`: `shop.url | append: '/#/schema/ImageObject/' | append: image.id`
