@@ -67,11 +67,11 @@ For example, the current `WebPage` can be enhanced with the `FAQPage` type and h
   }`}
 </YoastSchemaExample>
 
-### Availabity of the pieces
+### Availability of each piece
 
 Not all pieces will be relevant for every page on an online store. We describe the 
-[core logic](/features/schema/plugins/yoast-seo-shopify) of when these pieces are added to a page. When editing these
-pieces, the same logic should be taken into account.
+[core logic](/features/schema/plugins/yoast-seo-shopify) of when these pieces are added to a page. When altering the
+graph, the same logic should be taken into account.
 
 #### Check the pieces are enabled
 
@@ -79,13 +79,15 @@ Through the Yoast SEO for Shopify app, several pieces can be disabled. In these 
 We store this data in the metafield `yoast_seo.settings` on the `shop` object.  It's a JSON-type metafield, where the
 boolean enabled status of these pieces is stored in `schema.outputControls`.
 
-- `shop.metafields.yoast_seo.value.schema.outputControls.schema`: Whether all schema pieces are enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.organization`: Whether the `Organization` piece is enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.website`: Whether the `WebSite` piece is enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.webpage`: Whether the `WebPage` piece is enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.article`: Whether the `Article` piece is enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.product`: Whether the `Product` piece is enabled.
-- `shop.metafields.yoast_seo.value.schema.outputControls.breadcrumb`: Whether the `BreadcrumbList` piece is enabled.
+| Schema piece     | Metafield                                                            |
+|------------------|----------------------------------------------------------------------|
+| The entire graph | `shop.metafields.yoast_seo.value.schema.outputControls.schema`       |
+| `Organization`   | `shop.metafields.yoast_seo.value.schema.outputControls.organization` |
+| `WebSite`        | `shop.metafields.yoast_seo.value.schema.outputControls.website`      |
+| `WebPage`        | `shop.metafields.yoast_seo.value.schema.outputControls.webpage`      |
+| `Article`        | `shop.metafields.yoast_seo.value.schema.outputControls.article`      |
+| `Product`        | `shop.metafields.yoast_seo.value.schema.outputControls.product`      |
+| `BreadcrumbList` | `shop.metafields.yoast_seo.value.schema.outputControls.breadcrumb`   |
 
 #### Check the Organization's name and logo being defined
 
